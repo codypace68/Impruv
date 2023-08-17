@@ -1,0 +1,95 @@
+#impruv-home-circles {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    > div {
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        opacity: 7%;
+    }
+
+    > :nth-child(1) {
+        background: linear-gradient(225deg, #d4aea1, #9EDDC6, #022B4C);
+        border-radius: 50%;
+        top: -200px;
+        right: -130px;
+    }
+
+    > :nth-child(2) {
+        background: linear-gradient(45deg, #D4AFA1, #9EDDC6, #022B4C);
+        border-radius: 50%;
+        bottom: -170px;
+        left: -170px;
+    }
+}
+
+#impruv-home {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    
+
+    > #impruv-home-daily-tip-container {
+        position: absolute;
+        width: 60vw;
+        height: 60vh;
+        left: 30px;
+        top: 120px;
+        background: #00000099;
+        z-index: 10;
+        padding: 30px;
+        color: #fff;
+
+        > #impruv-home-daily-tip-header {
+            font-family: 'Bricolage Grotesque';
+            margin-top: 10px;
+            font-weight: normal;
+        }
+
+        > .impruv-home-daily-tip {
+            margin-bottom: 50px;
+
+            > h4.impruv-home-daily-top-header {
+                font-family: 'Bricolage Grotesque';
+                margin-top: 10px;
+                margin-bottom: 20px;
+                font-weight: normal;
+                color: #E3E3E3;
+            }
+
+            > p {
+                width: 80%;
+                
+                > .impruv-home-daily-tip-citation {
+                    font-style: italic;
+                    margin-top: 5px;
+                    text-align: right;
+                    display: block;
+                    color: #D9D9D9;
+                }
+            }
+        }
+    }
+
+    > #impruv-home-hero-img {
+        position: absolute;
+        bottom: -8%;
+        right: -10%;
+        width: auto;
+        height: 70%;
+        z-index: 1;
+
+        > img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: left bottom;
+            max-width: 80vw;
+        }
+    }
+}

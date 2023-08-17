@@ -1,0 +1,119 @@
+
+.impruv-header-container {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100dvw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    align-items: baseline;
+
+    > .impruv-header-brand {
+        font-family: 'Bricolage Grotesque';
+        font-weight: 400;
+        font-size: 1.5rem;
+        color: #000000;
+        text-decoration: none;
+        padding-left: 30px;
+    }
+
+    >  ul.impruv-header-links {
+        list-style: none;
+        font-family: 'IBM Plex Mono';
+        margin-left: auto;
+        margin-right: 30px;
+    
+        > li {
+            list-style: none;
+            padding-right: 30px;
+            font-size: 16px;
+        }
+
+        > li.active {
+            font-weight: 700;
+        }
+
+        > li.impruv-header-profile {
+            padding-right: 0;
+            width: 40px;
+            height: 40px;
+            overflow: hidden;
+            border-radius: 50%;
+            margin-top: -10px;
+
+            > img {
+                width: 100%;
+                object-fit: cover;
+                object-position: top;
+            }
+        }
+    }
+}
+
+/* mobile devices */
+@media (max-width: 480px) {
+    .impruv-header-container {
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100dvw;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        align-items: baseline;
+        background: #ffffffb2;
+        box-shadow: 0px 0px 7px #00000033;
+    
+        > .impruv-header-brand {
+            font-family: 'Bricolage Grotesque';
+            font-weight: 400;
+            font-size: 1.5rem;
+            color: #000000;
+            text-decoration: none;
+            padding-left: 30px;
+            flex-grow: 12;
+        }
+
+        > ul.impruv-header-links {
+            padding-left: 0;
+            padding-right: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100dvh;
+            padding-bottom: 10px;
+            z-index: 20;
+            margin: 0px;
+            display: none;
+
+            > li {
+                margin: 5px;
+                margin-left: 30px;
+                width: 100%;
+                text-align: center;
+                flex-grow: 12;
+                text-align: left;
+            }
+
+            > li.impruv-header-profile {
+                width: 40px;
+                height: 40px;
+                overflow: hidden;
+                border-radius: 50%;
+                margin-top: 5px;
+            }
+        }
+    }
+
+    .impruv-header-container::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(225deg, #d4aea112, #9EDDC612, #022B4C12);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}
