@@ -25,13 +25,15 @@
     }
 }
 
+
+
 #impruv-home {
     position: absolute;
     bottom: 0;
     top: 0;
-    overflow: hidden;
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
     
 
     > #impruv-home-daily-tip-container {
@@ -94,11 +96,31 @@
     }
 }
 
+@media (max-width: 900px) {
+    #impruv-home-daily-tip-container {
+        overflow-y: scroll;
+    }
+}
+
 @media (max-width: 480px) {
     #impruv-home-daily-tip-container {
-        height: 70dvh !important;
-        bottom: 0px;
-        left: 0px !important;
-        width: 100dvw !important;
+        height: 80dvh !important;
+        width: 70dvw !important;
+        margin: auto;
+        padding: 10px !important;
+        left: 50% !important;
+        top: 50% !important;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+
+        > p{
+            width: 90%;
+        }
     }
+
+    #impruv-home-hero-img {
+        display: none;
+    }
+
+    
 }

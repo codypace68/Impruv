@@ -32,6 +32,12 @@
             list-style: none;
             padding-right: 30px;
             font-size: 16px;
+            transition: all .2s ease-in-out;
+        }
+
+        > li:hover:not(.active):not(.impruv-header-profile) {
+            cursor: pointer;
+            margin-top: 2px;
         }
 
         > li.active {
